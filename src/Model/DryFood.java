@@ -36,3 +36,4 @@ public class DryFood extends Food {
 //10h08 roi
 //10h10
 //dm_gialong
+//dm_gialong_2
