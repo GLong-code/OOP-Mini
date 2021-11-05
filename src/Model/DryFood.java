@@ -3,28 +3,36 @@ package Model;
 import java.time.LocalDate;
 
 public class DryFood extends Food {
-    private final double size;
     private final double cost;
+    private static  final String idPrefix = "DF";
+    private String dryId;
     LocalDate today = LocalDate.now();
 
-    public DryFood(String foodID, String descbribe, int quantity, LocalDate importDay, LocalDate expiry, double size) {
-        super(foodID, descbribe, quantity, importDay, expiry);
-        this.size = size;
-        cost = size * 10000*(today.compareTo(importDay));
+    public DryFood(int foodID, String describe, int quantity, LocalDate importDay, LocalDate expiry, int foodClass, double atribute) {
+        super(foodID, describe, quantity, importDay, expiry,  foodClass, atribute);
+        this.dryId = idPrefix + foodID;
+        cost = atribute * 10000*(today.compareTo(importDay));
     }
 
-    public double getSize() {
-        return size;
+    public String getDryId() {
+        return dryId;
+    }
+
+    public void setDryId(String dryId) {
+        this.dryId = dryId;
+    }
+
+    public double getCost() {
+        return cost;
     }
 
     @Override
     public String toString() {
         return "DryFood{" +
-                "size=" + size +
+                "size=" + atribute +
                 ", cost=" + cost +
-                ", today=" + today +
                 ", foodID='" + foodID + '\'' +
-                ", descbribe='" + descbribe + '\'' +
+                ", descbribe='" + describe + '\'' +
                 ", quantity=" + quantity +
                 ", importDay=" + importDay +
                 ", expiry=" + expiry +

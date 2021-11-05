@@ -4,34 +4,54 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Food {
-    protected String foodID;
-    protected String descbribe;
+    protected int foodID;
+    protected String describe;
     protected int quantity;
     protected LocalDate importDay;
     protected LocalDate expiry;
+    protected int foodClass;
+    protected double atribute;
 
-    public Food(String foodID, String descbribe, int quantity, LocalDate importDay, LocalDate expiry) {
+    public Food(int foodID, String describe, int quantity, LocalDate importDay, LocalDate expiry, int foodClass, double atribute) {
         this.foodID = foodID;
-        this.descbribe = descbribe;
+        this.describe = describe;
         this.quantity = quantity;
         this.importDay = importDay;
         this.expiry = expiry;
+        this.foodClass = foodClass;
+        this.atribute = atribute;
     }
 
-    public String getFoodID() {
+    public String getDescribe() {
+        return describe;
+    }
+
+    public void setDescribe(String describe) {
+        this.describe = describe;
+    }
+
+    public int getFoodClass() {
+        return foodClass;
+    }
+
+    public void setFoodClass(int foodClass) {
+        this.foodClass = foodClass;
+    }
+
+    public double getAtribute() {
+        return atribute;
+    }
+
+    public void setAtribute(double atribute) {
+        this.atribute = atribute;
+    }
+
+    public int getFoodID() {
         return foodID;
     }
 
-    public void setFoodID(String foodID) {
+    public void setFoodID(int foodID) {
         this.foodID = foodID;
-    }
-
-    public String getDescbribe() {
-        return descbribe;
-    }
-
-    public void setDescbribe(String descbribe) {
-        this.descbribe = descbribe;
     }
 
     public int getQuantity() {
@@ -61,11 +81,13 @@ public class Food {
     @Override
     public String toString() {
         return "Food{" +
-                "foodID='" + foodID + '\'' +
-                ", descbribe='" + descbribe + '\'' +
+                "foodID=" + foodID +
+                ", foodClass=" + foodClass +
+                ", describe='" + describe + '\'' +
                 ", quantity=" + quantity +
                 ", importDay=" + importDay +
                 ", expiry=" + expiry +
+                ", atribute=" + atribute +
                 '}';
     }
 }
