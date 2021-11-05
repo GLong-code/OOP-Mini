@@ -10,7 +10,7 @@ public class DryFood extends Food {
     public DryFood(String foodID, String descbribe, int quantity, LocalDate importDay, LocalDate expiry, double size) {
         super(foodID, descbribe, quantity, importDay, expiry);
         this.size = size;
-        cost = size * 10000*(today.compareTo(expiry));
+        cost = size * 10000*(today.compareTo(importDay));
     }
 
     public double getSize() {
@@ -31,9 +31,3 @@ public class DryFood extends Food {
                 '}';
     }
 }
-
-//Bay gio 21h23p
-//10h08 roi
-//10h10
-//dm_gialong
-//dm_cacban

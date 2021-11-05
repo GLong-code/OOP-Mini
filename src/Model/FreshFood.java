@@ -10,7 +10,7 @@ public class FreshFood extends Food{
     public FreshFood(String foodID, String descbribe, int quantity, LocalDate importDay, LocalDate expiry, double weight) {
         super(foodID, descbribe, quantity, importDay, expiry);
         this.weight = weight;
-        cost = weight*10000*(today.compareTo(expiry));
+        cost = weight*20000*(today.compareTo(importDay));
     }
 
     public double getWeight() {
@@ -19,15 +19,15 @@ public class FreshFood extends Food{
 
     @Override
     public String toString() {
-        return "DryFood{" +
-                "weight=" + weight +
-                ", cost=" + cost +
-                ", today=" + today +
-                ", foodID='" + foodID + '\'' +
+        return "FreshFood{" +
+                "foodID='" + foodID + '\'' +
                 ", descbribe='" + descbribe + '\'' +
                 ", quantity=" + quantity +
                 ", importDay=" + importDay +
                 ", expiry=" + expiry +
+                ", weight=" + weight +
+                ", cost=" + cost +
+                ", today=" + today +
                 '}';
     }
 }
