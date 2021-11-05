@@ -15,9 +15,6 @@ import java.util.Date;
 public class main {
     public static void main(String[] args) throws SQLException, ParseException {
         FoodDAO foodDAO = new FoodDAO();
-
-        System.out.println(foodDAO.findbyExpiry(2021,11,20));
-
     }
 }
 

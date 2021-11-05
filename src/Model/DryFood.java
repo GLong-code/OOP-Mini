@@ -11,7 +11,7 @@ public class DryFood extends Food {
     public DryFood(int foodID, String describe, int quantity, LocalDate importDay, LocalDate expiry, int foodClass, double atribute) {
         super(foodID, describe, quantity, importDay, expiry,  foodClass, atribute);
         this.dryId = idPrefix + foodID;
-        cost = atribute * 10000*(today.compareTo(importDay));
+        cost = atribute * 10000*(today.getMonth().compareTo(importDay.getMonth()));
     }
 
     public String getDryId() {

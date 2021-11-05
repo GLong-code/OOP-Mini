@@ -216,8 +216,8 @@ public class FoodDAO {
             int foodID = rs.getInt("foodID");
             String describeFood = rs.getString("describeFood");
             int quantity = rs.getInt("quantity");
-            LocalDate importDay = LocalDate.of(importTime.getYear() + 1900, importTime.getMonth() + 1 , importTime.getDay());
-            LocalDate expiry = LocalDate.of(expiryTime.getYear() + 1900, expiryTime.getMonth() + 1 , expiryTime.getDay());
+            LocalDate importDay = LocalDate.of(importTime.getYear() + 1900, importTime.getMonth() + 1 , importTime.getDate());
+            LocalDate expiry = LocalDate.of(expiryTime.getYear() + 1900, expiryTime.getMonth() + 1 , expiryTime.getDate());
             int foodClass = rs.getInt("foodClass");
             double atribute = rs.getDouble("atribute");
             if(foodClass == 1){

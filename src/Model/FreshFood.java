@@ -11,7 +11,7 @@ public class FreshFood extends Food{
     public FreshFood(int foodID, String describe, int quantity, LocalDate importDay, LocalDate expiry,int foodClass ,double atribute) {
         super(foodID, describe, quantity, importDay, expiry, foodClass, atribute);
         this.freshId = idPrefix + foodID;
-        cost = atribute*20000*(today.compareTo(importDay));
+        cost = atribute*20000*(today.getMonth().compareTo(importDay.getMonth()));
     }
 
     public String getFreshId() {
